@@ -1,10 +1,7 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, validators
+from wtforms import TextAreaField, SubmitField, validators
 
 
 class Form(FlaskForm):
-    message = StringField(
-        "Posez votre question ici, par exemple Ou se trouve Clamart? Puis validez avec entrée",
-        [validators.DataRequired()],
-    )
+    message = TextAreaField("Votre message")
     submit = SubmitField("Envoyer")
