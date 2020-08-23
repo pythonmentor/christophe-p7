@@ -1,0 +1,76 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    background: #7F7FD5;
+   background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+
+.my-rowHeader {
+
+    border-radius: 15px 15px 0px 0px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-bottom: 1px solid black;
+}
+.my-container {
+
+    border-radius: 0px 0px 0px 0px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    height: 340px;
+    border-bottom: 1px solid black;
+
+}
+.message {
+    
+    color: white !important;
+    font-size: 16px;
+    
+
+}
+.test{
+    border:1px solid green
+}
+
+.avatar {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    object-position: right top;
+    background-color: transparent;
+}
+
+.my-rowFooter {
+
+    background-color: rgba(0, 0, 0, 0.4) !important;
+
+}
+.my-rowFooterTop {
+
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    margin: auto;
+}
+.github_logo{
+
+    height: 24px;
+    width: 24px;
+}
+.linkedin_logo{
+
+    height: 24px;
+    width: 24px;
+}
+
+.github_text{
+    font-size: 9px;
+    font-weight: bold;
+    padding-right: 50px;
+    border: 1px solid green;
+}
+
+.authorText{
+    font-size: 9px;
+    border: 1px solid green;
+}
+
+
+    
