@@ -22,7 +22,7 @@ class GoogleMap:
         try:
             config = {
                 "address": city,
-                "key": "AIzaSyBKX7eKln4wlYK5VLn-M04T0GF7Rjeascs",
+                "key": api_key,
             }
             res = requests.get(URL, params=config)
             if res.status_code == 200:
