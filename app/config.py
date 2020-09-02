@@ -1,4 +1,27 @@
+"""Module manage all the constant for the programme."""
+
+import os
+
+
+class Config:
+    """[summary]."""
+
+    AVATAR = "ressources/GranpyBot.png "
+    SECRET_KEY = os.environ.get("SECRET_KEY") or "you-will-never-die"
+    BOT_CREATOR = "Christophe Dupin"
+    BASE_LINE = "Bienvenue sur Grandpybot Application"
+    GITHUB = "https://github.com/Christophe-Dupin/P7GrandPyBot"
+    LINKEDIN = "https://www.linkedin.com/in/christophedupin/"
+
+
 STOP_WORDS = [
+    "?",
+    "!",
+    "/",
+    "&",
+    "$",
+    "(",
+    ")",
     "a",
     "abord",
     "absolument",
@@ -534,6 +557,7 @@ STOP_WORDS = [
     "tenant",
     "tend",
     "tenir",
+    "indiquer",
     "tente",
     "tes",
     "tic",
@@ -621,6 +645,7 @@ STOP_WORDS = [
     "connaissez",
     "salut",
     "grandpy",
+    "granpy",
     "bot",
     "papi",
     "papy",
@@ -637,6 +662,29 @@ STOP_WORDS = [
     "situe",
     "situer",
     "voudrais",
+    "plait",
     "veux",
     "peux-tu",
+    "grandpy",
+    "s'est",
+    "ta",
+    "s'il",
+    "j'y",
+    "pense",
+    "fait",
+    "grandma",
+    "soiree",
+    "soir",
+    "hier",
+    "soirée",
+    "plaît",
+    "pourrais-tu",
+    "Salut",
+    "Comment",
+    "Grandma",
+    "passe",
+    "Au",
 ]
+API_KEY = os.environ["api_key"]
+URL = "https://maps.googleapis.com/maps/api/geocode/json?"
+WIKI_API_URL = "https://fr.wikipedia.org/w/api.php"
