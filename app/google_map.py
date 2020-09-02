@@ -1,6 +1,6 @@
 """Module allow to get the coordinate of a spécifique city."""
 
-from app.config import URL
+from app.config import URL, api_key
 from app.parser import Parser
 from app.wikipedia import Wikipedia
 
@@ -39,7 +39,12 @@ class GoogleMap:
 
 
 if __name__ == "__main__":
-    c = Parser("absolument afin ailleurs papybot")
-    d = c.process()
-    print(d)
-    print(len(d))
+    a = Parser("Paris")
+    b = a.process()
+    c = GoogleMap()
+    d = Wikipedia()
+    e = d.get_article_id(
+        c.get_coordinate(b)["latitude"], c.get_coordinate(b)["longitude"]
+    )
+    f = d.get_article(e)
+
