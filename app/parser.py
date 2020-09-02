@@ -52,4 +52,5 @@ class Parser:
         :return: return a liste with only keyword
         :rtype: [List]
         """
+        #Gérer les exception ici
         return self.remove_stop_words(self.remove_accent())
