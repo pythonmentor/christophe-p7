@@ -9,5 +9,7 @@ def index():
     user = ["christophe", "Marc"]
     return render_template("index.html", user=user)
 
- def process():
-     # return json unify
+
+def process():
+    # return json unify
+    pass
