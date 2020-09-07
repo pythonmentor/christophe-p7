@@ -1,6 +1,6 @@
 """Module allow to get the coordinate of a spécifique city."""
 
-from app.config import URL, api_key
+from app.config import URL, API_KEY
 from app.parser import Parser
 from app.wikipedia import Wikipedia
 
@@ -22,7 +22,7 @@ class GoogleMap:
         try:
             config = {
                 "address": city,
-                "key": api_key,
+                "key": API_KEY,
             }
             res = requests.get(URL, params=config)
             if res.status_code == 200:
