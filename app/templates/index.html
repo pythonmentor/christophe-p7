@@ -54,7 +54,7 @@
         console.log(entry)
         fetch("/process", {
             method: "POST",
-            credentials: "same-origine",
+            credentials: "include",
             body: JSON.stringify(entry),
             cache: "no-cache",
             headers: new Headers({
