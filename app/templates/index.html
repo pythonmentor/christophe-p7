@@ -61,17 +61,18 @@
                 "content-type": "application/json"
             })
         })
-            .then(function (response) {
-                if (response.status !== 200) {
+            .then(response => {
+                if (!response.ok) {
                     console.log(`Looks like there was a problem. Status code: ${response.status}`);
-                    return;
+                    throw Error(response.statusText);
                 }
-                response.json().then(function (data) {
-                    console.log(data);
-                });
+                return response.json();
             })
             .catch(function (error) {
-                console.log("Fetch error: " + error);
+                console.log("Network error: " + error);
+            })
+            .then(data => {
+                console.log(data);
             });
     }
 </script>
