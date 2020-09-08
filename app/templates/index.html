@@ -23,12 +23,16 @@
                         </li>
                     </ul>
                 </div>
+                <div id="map"></div>
                 <div class="card user_message">
                     <form>
                         <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            <textarea class="form-control" id="message" rows="3"
                                 placeholder="Entrer un lieu, une adresse"></textarea>
+                            <button class="btn btn-primary" id="submit" onclick="submit_message();">Submit
+                                message</button>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -36,4 +40,39 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block script %}
+<script>
+    function submit_message() {
+        var message = document.getElementById("message");
+
+        var entry = {
+            message: message.value
+
+        };
+        console.log(entry)
+        fetch("/process", {
+            method: "POST",
+            credentials: "same-origine",
+            body: JSON.stringify(entry),
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "application/json"
+            })
+        })
+            .then(function (response) {
+                if (response.status !== 200) {
+                    console.log(`Looks like there was a problem. Status code: ${response.status}`);
+                    return;
+                }
+                response.json().then(function (data) {
+                    console.log(data);
+                });
+            })
+            .catch(function (error) {
+                console.log("Fetch error: " + error);
+            });
+    }
+</script>
 {% endblock %}
