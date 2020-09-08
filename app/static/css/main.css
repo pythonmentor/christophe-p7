@@ -107,3 +107,6 @@ body,html{
 .twitter{
     margin-top: 10px;
 }
+#map {
+    height: 100%;
+  }
