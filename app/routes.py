@@ -17,17 +17,5 @@ def process():
     parser = Parser(req["message"])
     run_parser = parser.process()
     google_map = GoogleMap()
-    d = google_map.get_coordinate(run_parser)
-    return make_response(jsonify(d))
-
-
-@my_app.route("/guestbook")
-def guestbook():
-    return render_template("/guestbook.html")
-
-
-@my_app.route("/guestbook/create-entry", methods=["POST"])
-def create_entry():
-
-    req = request.get_json()
-    return make_response(jsonify(req), 200)
+    coordinate = google_map.get_coordinate(run_parser)
+    return make_response(jsonify(coordinate))
