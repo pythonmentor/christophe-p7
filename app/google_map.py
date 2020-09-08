@@ -42,9 +42,11 @@ if __name__ == "__main__":
     a = Parser("Paris")
     b = a.process()
     c = GoogleMap()
-    d = Wikipedia()
-    e = d.get_article_id(
-        c.get_coordinate(b)["latitude"], c.get_coordinate(b)["longitude"]
-    )
-    f = d.get_article(e)
+    print(type(c.get_coordinate(b)))
+    # d = Wikipedia()
+    # e = d.get_article_id(
+    # c.get_coordinate(b)["latitude"], c.get_coordinate(b)["longitude"]
+    # )
+    # print(e)
+    # f = d.get_article(e)
 
